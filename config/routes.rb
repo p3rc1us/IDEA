@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # get "/furniture_items", to: "articles#index" no need because I ALREADY HAVE RESOURCES
+
 end

@@ -1,10 +1,11 @@
-<h1 class= "flex items-center justify-center">Editing furniture item</h1>
+<h1 class= "flex items-center justify-center font-light text-2xl mt-10 mb-10">Editing <%= @furniture_item.name %> item</h1>
 
 <%= render "form", furniture_item: @furniture_item %>
 
 <br>
 
-<div class= "flex items-center justify-center">
-  <%= link_to "Show this furniture item", @furniture_item %> |
-  <%= link_to "Back to furniture items", furniture_items_path %>
+<div class= "flex items-center justify-center mt-10">
+
+  <%= link_to "Show this furniture item", @furniture_item, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-blue-800 mr-1" %>
+  <%= link_to "Back to furniture items", furniture_items_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-blue-800 ml-1" %>
 </div>

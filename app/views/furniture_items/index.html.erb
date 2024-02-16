@@ -4,15 +4,15 @@
 
 <h1 class = "text-7xl mt-5">IDEA</h1>
 <h1 class = "text-s">an IKEA rip-off</h1>
-<%= link_to "Add a furniture", new_furniture_item_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer mt-5 mb-16 " %>
+<%= link_to "Add a furniture", new_furniture_item_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer mt-5 mb-16 hover:bg-blue-800 " %>
 
-<div class ="flex flex-col items-center justify-center" id="furniture_items">
+<div class ="flex flex-col items-center justify-center mt-2" id="furniture_items">
 
   <% @furniture_items.each do |furniture_item| %>
     
     <% if furniture_item.image_url.present? %>
       <%= link_to furniture_item do %>
-        <%= image_tag(furniture_item.image_url, class: "w-full h-full mb-5 mt-16 rounded-xl") %>
+        <%= image_tag(furniture_item.image_url, class: "w-full h-full mb-5 rounded-xl") %>
       <% end %>
     <% end %>
 

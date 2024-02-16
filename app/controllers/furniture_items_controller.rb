@@ -65,6 +65,6 @@ class FurnitureItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def furniture_item_params
-      params.require(:furniture_item).permit(:name, :material)
+      params.require(:furniture_item).permit(:name, :material, :image_url)
     end
 end

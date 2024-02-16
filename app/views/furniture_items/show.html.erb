@@ -2,6 +2,12 @@
 
 <%= render @furniture_item %>
 
+<p>
+  <strong>Images:</strong>
+  <%= image_tag(@furniture_item.image_url) if @furniture_item.image_url.present? %>
+</p>
+
+
 <div>
   <%= link_to "Edit this furniture item", edit_furniture_item_path(@furniture_item) %> |
   <%= link_to "Back to furniture items", furniture_items_path %>

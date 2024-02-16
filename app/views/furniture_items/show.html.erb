@@ -1,13 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div class="overflow-hidden">
+  <span style="color: green"><%= notice %></span>
+  <div class = "grid grid-cols-2 items-center justify-center">
+    <%= image_tag(@furniture_item.image_url, class: "grid-rows-subgrid row-span-2 mt-10 mb-10 h-full w-full") if @furniture_item.image_url.present? %>
+    <%= render @furniture_item %> 
 
-<div class = "flex flex-col items-center justify-center">
-  <%= image_tag(@furniture_item.image_url, class: "rounded-xl mt-10 mb-10") if @furniture_item.image_url.present? %>
-  <%= render @furniture_item %> 
+    <div class = "flex items-center justify-center mb-10 overflow-hidden">
+      <%= link_to "Edit #{@furniture_item.name}", edit_furniture_item_path(@furniture_item), class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-blue-800 mr-1" %>
+      <%= link_to "Back to Furnitures", furniture_items_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-blue-800 mr-1 ml-1" %>
+      <%= link_to "Destroy #{@furniture_item.name}", @furniture_item, method: :delete, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-red-500 ml-1" %>
+    </div>
+
+  </div>
 </div>
 
 
-<div class = "flex items-center justify-center mb-10">
-  <%= link_to "Edit #{@furniture_item.name}", edit_furniture_item_path(@furniture_item), class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-blue-800 mr-1" %>
-  <%= link_to "Back to Furnitures", furniture_items_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-blue-800 mr-1 ml-1" %>
-  <%= link_to "Destroy #{@furniture_item.name}", @furniture_item, method: :delete, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer hover:bg-red-500 ml-1" %>
-</div>
+

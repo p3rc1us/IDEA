@@ -1,5 +1,5 @@
 databases:
-  - name: IDEA
+  - name: mysite
     databaseName: furniture_items
     user: mysite
     plan: free

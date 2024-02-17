@@ -5,12 +5,12 @@
     <%= render @furniture_item %> 
 
     <div class = "flex items-center justify-center mb-10 overflow-hidden">
-      <%= link_to "Edit #{@furniture_item.name}", edit_furniture_item_path(@furniture_item), class: "bg-yellow-500 text-white p-2 rounded cursor-pointer transition-colors duration-400 ease-in-out hover:bg-blue-800 mr-1" %>
-      <%= link_to "Back to Furnitures", furniture_items_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer transition-colors duration-400 ease-in-out hover:bg-blue-800 mr-1 ml-1" %>
+      <%= link_to "Edit #{@furniture_item.name}", edit_furniture_item_path(@furniture_item), class: "bg-yellow-500 text-white p-2 rounded cursor-pointer transition-colors duration-300 ease-in-out hover:bg-blue-800 mr-1" %>
+      <%= link_to "Back to Furnitures", furniture_items_path, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer transition-colors duration-300 ease-in-out hover:bg-blue-800 mr-1 ml-1" %>
       <%= link_to "Destroy", @furniture_item, data: {
             turbo_method: :delete,
             turbo_confirm: "Are you REALLY sure?"
-            }, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer transition-colors duration-400 ease-in-out hover:bg-red-500 ml-1" %>
+            }, class: "bg-yellow-500 text-white p-2 rounded cursor-pointer transition-colors duration-300 ease-in-out hover:bg-red-500 ml-1" %>
     </div>
 
   </div>

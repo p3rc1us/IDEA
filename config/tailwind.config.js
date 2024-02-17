@@ -16,7 +16,7 @@ module.exports = {
         '800px': '800px',
         '950px': '950px',
         '1000px': '1000px',
-        '101%': '101%'
+        '90%': '90%'
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

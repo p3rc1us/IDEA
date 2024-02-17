@@ -1,25 +1,25 @@
 class FurnitureItemsController < ApplicationController
   before_action :set_furniture_item, only: %i[ show edit update destroy ]
 
-  # GET /furniture_items
+  # GET '/furniture_items', to: 'furniture_items#index'
   def index
     @furniture_items = FurnitureItem.all
   end
 
-  # GET /furniture_items/1
+  # GET '/furniture_items/:id', to 'furniture_items#show'
   def show
   end
 
-  # GET /furniture_items/new
+  # GET '/furniture_items/new', to: 'furniture_items#new'
   def new
     @furniture_item = FurnitureItem.new
   end
 
-  # GET /furniture_items/1/edit
+  # GET '/furniture_items/:id/edit', to: 'furniture_items#edit'
   def edit
   end
 
-  # POST /furniture_items
+  # POST '/furniture_items', to: 'furniture_items#create'
   def create
     @furniture_item = FurnitureItem.new(furniture_item_params)
 
@@ -34,7 +34,7 @@ class FurnitureItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /furniture_items/1 or /furniture_items/1.json
+  # PATCH/PUT '/furniture_items/:id', to 'furniture_items#update'
   def update
     respond_to do |format|
       if @furniture_item.update(furniture_item_params)
@@ -47,7 +47,7 @@ class FurnitureItemsController < ApplicationController
     end
   end
 
-  # DELETE /furniture_items/1
+  # DELETE '/furniture_items/:id', to: 'furniture_items#destroy'
   def destroy
     @furniture_item.destroy!
 

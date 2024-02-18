@@ -2,7 +2,7 @@
 <%= form_with(model: furniture_item) do |form| %>
   <% if furniture_item.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(furniture_item.errors.count, "error") %> prohibited this furniture_item from being saved:</h2>
+      <h2>You have <%= pluralize(furniture_item.errors.count, "error") %> my friend:</h2>
 
       <ul>
         <% furniture_item.errors.each do |error| %>
@@ -25,6 +25,16 @@
   <div>
     <%= form.label :image_url, style: "display: block" %>
     <%= form.text_field :image_url %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :price, style: "display: block" %>
+    <%= form.text_field :price %>
   </div>
 
   <div class="mt-5 flex justify-center">
